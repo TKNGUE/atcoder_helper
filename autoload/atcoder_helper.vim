@@ -30,7 +30,7 @@ function! atcoder_helper#init(contest_name)
 
     command! -nargs=? AtCoderDownload call atcoder_helper#download('<args>')
     command! -nargs=0 AtCoderCheck    call atcoder_helper#check()
-    command! -nargs=0 AtCoderSubmmit  call atcoder_helper#submmit()
+    command! -nargs=0 AtCoderSubmit  call atcoder_helper#submit()
 endfunction
 
 function! atcoder_helper#download(num)
@@ -58,7 +58,7 @@ function! atcoder_helper#check()
     endif
 endfunction
 
-function! atcoder_helper#submmit()
+function! atcoder_helper#submit()
     execute 'cd ' . expand('%:p:h')
     let l:execmd = 'python ' . g:online_jadge_path .' -u '. g:atcoder_config . ' --atcoder ' . g:atcoder_contest_name. ' '. expand('%:p:h:t') . ' -s -i '. expand('%:p') 
     let errors =  system(l:execmd)
