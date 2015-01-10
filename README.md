@@ -1,27 +1,25 @@
 atcode_helper
 ====================
 
-
-Documentation
-====================
-
-
-Features
-====================
+This plugin is a aid tool for programing contest
+Do download, check, submit...
 
 
+##Documentation
 
-Instlation
-====================
+
+##Features
 
 
 
-Configuration
-====================
+##Instlation
 
 
 
-FAQ
-====================
+##Configuration
+
+
+
+##FAQ
 
 
