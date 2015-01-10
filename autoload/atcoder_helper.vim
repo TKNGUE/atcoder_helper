@@ -1,18 +1,16 @@
-
-
 function! atcoder_helper#init(contest_name)
     if exists('g:online_jadge_path')
-        let g:online_jadge_path = ''
+        let g:online_jadge_path = 'python oj.py'
     endif
     if exists('g:dir_atcoder')
-        let g:dir_atcoder = ''
+        let g:dir_atcoder = '$HOME/atcoder'
     endif
 
     call atcoder_helper#mkdir(g:dir_atcoder, 1)
-    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, 'A'))
-    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, 'B'))
-    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, 'C'))
-endfunction
+    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, contest_name, 'A'), 1)
+    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, contest_name, 'B'), 1)
+    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, contest_name, 'C'), 1)
+    call atcoder_helper#mkdir(atcoder_helper#join(g:dir_atcoder, contest_name, 'D'), 1)
 
 function! atcoder_helper#mkdir(dir, force)
     if !isdirectory(a:dir) && (a:force ||

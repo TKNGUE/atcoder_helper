@@ -1,4 +1,4 @@
-<+PLUGIN_NAME+>
+atcode_helper
 ====================
 
 
